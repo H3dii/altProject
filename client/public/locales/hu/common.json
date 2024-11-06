@@ -1,0 +1,6 @@
+{
+    "locales": [
+        { "name": "Magyar", "tag": "hu", "icon": ":flag-hungary:" },
+        { "name": "Angol", "tag": "en", "icon": ":flag-united-kingdom:" }
+    ]
+}

@@ -1,0 +1,85 @@
+{
+  "kind": "collectionType",
+  "collectionName": "animes",
+  "info": {
+    "singularName": "anime",
+    "pluralName": "animes",
+    "displayName": "anime",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "malid": {
+      "type": "integer"
+    },
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "hero": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::hero.hero",
+      "mappedBy": "anime"
+    },
+    "genres": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::genre.genre",
+      "mappedBy": "anime"
+    },
+    "cover": {
+      "type": "string"
+    },
+    "published": {
+      "type": "boolean",
+      "default": false
+    },
+    "nsfw": {
+      "type": "boolean",
+      "default": false
+    },
+    "media_type": {
+      "type": "string"
+    },
+    "status_type": {
+      "type": "string"
+    },
+    "num_episodes": {
+      "type": "integer"
+    },
+    "average_episode_duration": {
+      "type": "integer"
+    },
+    "season": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::season.season",
+      "mappedBy": "anime"
+    },
+    "current_episodes": {
+      "type": "integer",
+      "default": 0
+    },
+    "start_date": {
+      "type": "date"
+    },
+    "end_date": {
+      "type": "date"
+    },
+    "alternative_titles": {
+      "type": "json"
+    },
+    "studios": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::studio.studio",
+      "inversedBy": "anime"
+    }
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "heroes",
+  "info": {
+    "singularName": "hero",
+    "pluralName": "heroes",
+    "displayName": "hero",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "anime": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::anime.anime",
+      "inversedBy": "hero"
+    },
+    "news": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::new.new",
+      "inversedBy": "hero"
+    }
+  }
+}
