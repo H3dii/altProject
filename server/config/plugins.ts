@@ -6,8 +6,8 @@ export default ({ env }) => ({
                 host: "smtp.gmail.com",
                 port: 587,
                 auth: {
-                    user: "hh3adshot@gmail.com",
-                    pass: "kjbdvfqziyqzquxq",
+                    user: "",
+                    pass: "",
                 },
             },
             settings: {
